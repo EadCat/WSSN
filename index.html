@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weakly-Supervised Stitching Network for Real-World Panoramic Image Generation</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  </head>
+
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>Weakly-Supervised Stitching Network <br>
+              for Real-World Panoramic Image Generation</h2>
+            <h4 style="color:#5a6268;">ECCV 2022</h4>
+            <br>
+            <hr>
+            <h6> 
+              <a href="https://eadcat.github.io" target="_blank">Dae-Young Song</a><sup>1</sup>,
+                Geonsoo Lee<sup>1</sup>,
+                HeeKyung Lee<sup>2</sup>,
+                Gi-Mun Um<sup>2</sup>, and
+                <a href="https://sites.google.com/view/cnu-cvip" target="_blank">Donghyeon Cho</a><sup>1</sup>
+                <br><br>
+            <p><sup>1</sup>Computer Vision and Image Processing (CVIP) Lab., Chungnam National University, Daejeon, South Korea <br> 
+                <sup>2</sup>Electronics and Telecommunication Research Institute (ETRI), Daejeon, South Korea
+
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/pdf/2012.15838.pdf" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Paper</a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/zju3dv/neuralbody" role="button"  target="_blank">
+                    <i class="fa fa-github-alt"></i> Code</a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/zju3dv/neuralbody/blob/master/INSTALL.md#zju-mocap-dataset" role="button">
+                    <i class="fa fa-database"></i> Data</a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/zju3dv/neuralbody/blob/master/supplementary_material.md" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Supplementary</a> </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+            <h6 style="color:#8899a5"> Generate a 360&deg; panarama without genuine ground-truth.</h6>
+            <video width="70%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+              <source src="video/teaser.mp4" type="video/mp4">
+          </video>
+          <!-- <br><br> -->
+          <!-- Abstract below -->
+          <p class="text-abstract"> Recently, there has been growing attention on an end-to-end deep learning-based stitching model. However, the most challenging point in deep learning-based stitching is to obtain pairs of input images with a narrow field of view and ground truth images with a wide field of view captured from real-world scenes. To overcome this difficulty, we develop a weakly-supervised learning mechanism to train the stitching model without requiring genuine ground truth images. In addition, we propose a stitching model that takes multiple real-world fisheye images as inputs and creates a 360&deg; output image in an equirectangular projection format. In particular, our model consists of color consistency corrections, warping, and blending, and is trained by perceptual and SSIM losses. The effectiveness of the proposed algorithm is verified on two real-world stitching datasets. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+  <!-- Model Architecture -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Image Stitching Network Architecture</h3>
+            <hr style="margin-top:0px">
+            <img src="image/Architecture.png", alt="The image cannot be displayed!", width=80%>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br>
+
+  <!-- Dataset Configuration -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Dataset Configurations</h3>
+            <hr style="margin-top:0px">
+            <img src="image/Dataset.png", alt="The image cannot be displayed!", width=100%>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+  <!-- Ablations -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>More Ablation Studies</h3>
+            <hr style="margin-top:0px">
+            <img src="image/Ours.png", alt="The image cannot be displayed!", width=85%> <br><br>
+            <img src="image/Ours-wo-post.png", alt="The image cannot be displayed!", width=85%> <br><br>
+            <img src="image/Ours-wo-pre.png", alt="The image cannot be displayed!", width=85%> <br><br>
+            <img src="image/Ours-wo-both.png", alt="The image cannot be displayed!", width=85%> <br><br>
+            <img src="image/Ours-L1.png", alt="The image cannot be displayed!", width=85%> <br><br>
+            <img src="image/Ours-wo-local.png", alt="The image cannot be displayed!", width=85%> <br><br>
+            <img src="image/Ours-wo-color-preprocessing.png", alt="The image cannot be displayed!", width=85%> <br><br>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- Photoshop -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Photoshop Result</h3>
+            <hr style="margin-top:0px">
+            <img src="image/Photoshop.png", alt="The image cannot be displayed!", width=85%> <br><br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- Local Warping Layer -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Effect of Local Warping Layer</h3>
+            <hr style="margin-top:0px">
+            <img src="image/Ablation-local-warping.png", alt="The image cannot be displayed!", width=85%> <br><br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- Additional Description for Perceptual Loss -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Additional Description for Perceptual Loss</h3>
+            <hr style="margin-top:0px">
+            <img src="image/Parallax.png", alt="The image cannot be displayed!", width=85%> <br><br>
+            <img src="image/GT-parallax.png", alt="The image cannot be displayed!", width=85%> <br><br>
+            <p class="text-abstract">
+              Geometric distortions occur if L1 loss or low level feature map is used for training, 
+              because there are differences in centers between GT cameras.
+              Therefore, we adopt high-level (3rd, 4th, and 5th maxpooling layer's output) feature maps to calculate perceptual loss.
+              Since the VGG-16 is trained for classification, features such as edges or shapes are calculated with GT in the low-level feature map,
+              whereas features in high-level feature map to classify objects are calculated.
+              Specifically, the features represented in the figure below is shown for each level of each maxpooling layer of the VGG-16.
+            </p>
+            <br>
+            <img src="image/features.png", alt="The image cannot be displayed!", width=95%> <br><br>
+            <p class="text-center">
+              Download here [ <a href="image/perceptual-1.zip">file1</a> | <a href="image/perceptual-2.zip">file2</a> | <a href="image/perceptual-3.zip">file3</a> ] to observe at a larger resolution.
+            </p>
+            <br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- Contact -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Contact</h3>
+            <hr style="margin-top:0px">
+            <p class="text-center">
+              For more questions, please contact eadyoung@naver.com or eadgaudiyoung@gmail.com.
+            <br>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+  <!-- Citing -->
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Citation</h3>
+          <hr style="margin-top:0px">
+              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@inproceedings{song2022weakly,
+  title={Weakly-Supervised Stitching Network for Real-World Panoramic Image Generation},
+  author={Song, Dae-Young and Lee, Geonsoo and Lee, HeeKyung and Um, Gi-Mun and Cho, Donghyeon},
+  booktitle={ECCV},
+  year={2022}
+}</code></pre>
+          <hr>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center" style="margin-bottom:10px">
+    Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template.
+</footer>
+
+</body>
+</html>
